@@ -6,7 +6,7 @@
 #include "console.h"
 #include "watchdog.h"
 
-#define BAUD 9600
+#define BAUD 38400
 
 void hw_uart_init(void)
 {

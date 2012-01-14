@@ -4,13 +4,22 @@
 #include <avr/io.h>
 
 #if __AVR_ATmega168__
-#define SPI_PORT    PORTB
-#define SPI_DDR     DDRB
-#define SPI_SS      PB2
-#define SPI_MOSI    PB3
-#define SPI_MISO    PB4
-#define SPI_SCLK    PB5
-#define SPI_CS      PB1
+//#define SPI_PORT    PORTB
+//#define SPI_DDR     DDRB
+//#define SPI_SS      /*PD5*/ PB2 //D10
+//#define SPI_MOSI    /*PD6*/ PB3 //D11
+//#define SPI_MISO    /*PD7*/ PB4 //D12
+//#define SPI_SCLK    /*PD3*/ PB5 //D13
+//#define SPI_CS      PB0 //PB1 //D9
+
+#define SPI_PORT    PORTD
+#define SPI_DDR     DDRD
+#define SPI_SS      PD5 //PB2 //D5
+#define SPI_MOSI    PD6 //PB3 //D6
+#define SPI_MISO    PD7 //PB4 //D7
+#define SPI_SCLK    PD3 //PB5 //D3
+#define SPI_CS      PD2 //PB1 //D2
+
 #elif __AVR_AT90USB162__
 #define SPI_PORT    PORTB
 #define SPI_DDR     DDRB
